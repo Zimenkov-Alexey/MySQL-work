@@ -1,0 +1,17 @@
+Условия:
+[![Lesson](https://qastudio.notion.site/SQL-1459cf7d33c64a0a872e80459d3c9aec)]
+Решение:
+1. select name, surname from staff where age > '24' and city = 'Moscow';
+2. select name, surname from staff order by age;
+3. select Staff.age from staff join Positions on staff.position_id=positions.id where positions.position_name='qa_engineer';
+4. select staff.name as first_name, staff.surname as second_name from Staff join Positions on staff.position_id=positions.id where positions.position_name='frontend_dev' limit 20;
+5. select Computers.computer_name from computers join Positions on computers.id=Positions.computer_id join staff on Positions.id=staff.position_id where staff.name='anastasia' and staff.surname='morozova';
+6. select COUNT(*) from Staff where City='Moscow';
+7. select staff.name as first_name, Positions.salary from staff join Positions on staff.position_id=Positions.id order by staff.id;
+8. select sum(Positions.salary) from Positions join staff on Positions.id=staff.position_id where city='Moscow';
+9. select staff.city as adress, sum(Positions.salary) as Sum from Positions join staff on Positions.id=staff.position_id group by city order by staff.city desc;
+10. select distinct city as adress from staff;
+10. select city from staff group by city order by min(age); - ответ как на картинке, но его не получить в связке distinct и order by
+11. select distinct city as adress from staff where city like '%k%' order by city;
+12. select Position_Name, salary from positions where salary between '1500' and '2200';
+13. select staff.name, staff.surname, positions.position_name from staff right join positions on Positions.id=staff.position_id order by staff.id;
