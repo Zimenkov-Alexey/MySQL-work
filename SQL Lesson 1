@@ -1,5 +1,5 @@
 Условия:
-[![Lesson](https://qastudio.notion.site/SQL-1459cf7d33c64a0a872e80459d3c9aec)]
+https://qastudio.notion.site/SQL-1459cf7d33c64a0a872e80459d3c9aec
 Решение:
 1. select name, surname from staff where age > '24' and city = 'Moscow';
 2. select name, surname from staff order by age;
